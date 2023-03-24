@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Font Awesome Icon -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Music-Player</title>
+</head>
+<body>
+    <div class="music-player">
+        <div class="nav">
+        <!-- <button id="user">
+            <i class="fa-solid fa-user"></i> -->
+        <img id="user-image" src="./Data/pexels-pixabay-36029.jpg"/>
+        </button>
+        <button id="playlist">
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        </div>
+        <img id="song-image" src="./Data/need-you-now.jpg"/>
+        <div class="song-details">
+            <p id="song-name">Need You Now</p>
+            <p id="song-a">Culture Code</p>
+        </div>
+        <div class="player-options">
+            <button id="shuffle">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+            <button id="prev">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button id="pause" class="hide">
+                <i class = "fa-solid fa-pause"></i>
+            </button>
+            <button id="play">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <button id="next">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+            <button id="repeat">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+        </div>
+        <audio id="audio" preload="metadata"></audio>
+        <div id="progress-bar">
+            <div id="current-progress"></div>
+        </div>
+        <div class="time-container">
+            <span id="current-time">0.00</span>
+            <span id="max-duration">0.00</span>
+        </div>
+        <div id="playlist-container" class="hide">
+            <div class="show">
+            <button id="close-button">
+            <i class="fa-solid fa-xmark"></i>
+            </button>
+            <input id="search-bar" onkeyup="search_song()" type="text"
+            name="search" placeholder="Search Song..." class="'hide">
+            </div>
+            <ul id="playlist-song"></ul>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="app.js"></script>  
+</body>
+</html>
